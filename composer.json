@@ -1,20 +1,21 @@
 {
-    "name": "meirelles/pure-php-api",
-    "description": "Basic REST API made with a minimum number of third party packages",
-    "type": "project",
-    "require": {
-        "php": "^8.3"
-    },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Luis Meirelles"
-        }
-    ],
-    "minimum-stability": "stable",
-    "autoload": {
-        "psr-4": {
-            "App\\": "src/"
-        }
+  "name": "meirelles/pure-php-api",
+  "description": "Basic REST API made with a minimum number of third party packages",
+  "type": "project",
+  "require": {
+    "php": "^8.3",
+    "ext-mbstring": "*"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Luis Meirelles"
     }
+  ],
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  }
 }

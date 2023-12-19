@@ -11,5 +11,18 @@ class Router
     /**
      * @var Route[] $routes
      */
-    private array $routes = [];
+    public array $routes = [
+        'GET' => [],
+        'POST' => [],
+        'PUT' => [],
+        'DELETE' => []
+    ];
+
+    /**
+     * @return Route[]
+     */
+    public function getRoutes(): array
+    {
+        return $this->routes;
+    }
 }
