@@ -17,6 +17,12 @@ readonly class CommentController
 
     }
 
+    #[Get(':commentId')]
+    public function show()
+    {
+
+    }
+
     #[Post]
     public function create()
     {

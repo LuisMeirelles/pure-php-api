@@ -3,7 +3,6 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use App\ApplicationBase\Router\Attributes\Controller;
-use App\ApplicationBase\Router\Attributes\Get;
 use App\ApplicationBase\Router\Attributes\HttpMethod;
 use App\ApplicationBase\Router\Route;
 use App\ApplicationBase\Router\Router;
@@ -64,12 +63,12 @@ foreach ($controllerFilePaths as $filePath) {
         $temp = &$router->routes[$httpMethod];
 
         foreach (explode('/', $routePath) as $routeSegment) {
-            $temp[$routeSegment] = [];
+            $temp[$routeSegment] ??= [];
 
             $temp = &$temp[$routeSegment];
         }
 
-        $temp = new Route(
+        $temp['route'] = new Route(
             method: $httpMethod,
             path: $routePath,
             controller: $className,
